@@ -1,0 +1,60 @@
+{
+    "workbench.colorCustomizations": {
+        "[Default High Contrast]": {
+            "foreground": "#ffffff",
+            "editor.background": "#00000000",
+            "menu.foreground": "#ffffff",
+            "contrastBorder": "#ffffff",
+            "contrastActiveBorder": "#646464",
+            "editorGroupHeader.tabsBackground": "#00000000",
+            "sideBar.background": "#00000000",
+            "sideBarSectionHeader.background": "#00000000",
+            "peekViewEditor.background": "#00000000",
+            "peekViewEditorGutter.background": "#00000000",
+            "peekViewTitle.background": "#00000000",
+            "peekViewResult.background": "#00000000",
+            "tab.activeBackground": "#00000000",
+            "tab.inactiveBackground": "#00000000",
+            "statusBar.background": "#00000000",
+            "statusBar.debuggingBackground": "#00000000",
+            "statusBar.noFolderBackground": "#00000000",
+            "statusBarItem.activeBackground": "#00000000",
+            "panel.background": "#00000000",
+            "activityBar.background": "#00000000",
+            "terminal.background": "#00000000"
+        }
+    },
+    "editor.fontFamily": "'Courier Prime Code', 'monospace', monospace",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "clangd.path": "/home/BelDot/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/17.0.3/clangd_17.0.3/bin/clangd",
+    "window.menuBarVisibility": "toggle",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "C_Cpp_Runner.debuggerPath": "lldb",
+    "workbench.settings.applyToAllProfiles": [
+        "C_Cpp_Runner.debuggerPath"
+    ],
+    "zenMode.hideStatusBar": false,
+    "C_Cpp_Runner.cppStandard": "c++17",
+    "workbench.colorTheme": "Default High Contrast",
+    "workbench.preferredDarkColorTheme": "Default High Contrast",
+    "C_Cpp_Runner.includeSearch": [
+        "*",
+        "**/*",
+        "/usr/include/*"
+    ],
+    "workbench.preferredLightColorTheme": "Default High Contrast Light",
+    "vscode-neovim.afterInitConfig": [
+        "set relativenumber"
+    ],
+    "apc.electron": {
+        "backgroundColor": "rgba(40, 42, 54, 0.8)", // Set this to desired bg color
+        "frame": false,
+        "transparent": true,
+        "titleBarStyle": "hiddenInset",
+        "vibrancy": "ultra-dark",
+        "opacity": 0.85, // Range: 0-1 (To go fully transparent, set it to 0)
+        "visualEffectState": "active"
+    }
+}
