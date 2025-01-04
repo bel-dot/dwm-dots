@@ -1,0 +1,71 @@
+@import "onebar/onebar.css";
+
+
+.tab-icon-stack {
+  display: none !important;
+}
+
+.tab-close-button {
+  display: none !important;
+}
+
+/* Remove borders and radius */
+
+.tab-background {
+  outline: none !important;;
+  margin-block: 0 !important;;
+  border-radius: 0 !important;;
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab {
+  padding: 0 !important;
+  
+}
+
+.tab-content {
+  padding: 0 5px !important;
+  font-size: 1.1em;
+  border-right: 1px solid #88888888 !important;
+}
+
+#urlbar-container {
+  padding: 0 !important;
+  min-height: 30px !important;
+}
+
+#navigator-toolbox {
+  max-height: 30px !important;
+  width: 100%;
+}
+
+.browser-toolbar {
+  max-height: inherit !important;
+  padding: 0 !important;
+}
+
+.customization-target {
+  min-height: 30px !important;
+}
+
+#nav-bar {
+  border-top: 0 !important;
+}
+
+.toolbarbutton-1 {
+  width: 30px !important;
+  height: 30px !important;;
+  padding: 0 !important;
+  /*! top: 0; */
+  /*! position: absolute; */
+}
+
+.toolbarbutton-1:hover, .toolbarbutton-1[open="true"] {
+  fill: #000000 !important;
+}
+
+
+* {
+  font-weight: bold !important;
+  border-radius: 0 !important;
+}
