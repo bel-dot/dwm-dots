@@ -56,5 +56,6 @@
         "vibrancy": "ultra-dark",
         "opacity": 0.85, // Range: 0-1 (To go fully transparent, set it to 0)
         "visualEffectState": "active"
-    }
+    },
+    "security.workspace.trust.untrustedFiles": "open"
 }
