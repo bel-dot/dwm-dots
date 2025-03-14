@@ -17,8 +17,8 @@
 ;==========================================================
 
 [colors]
-background = #ffffff
-foreground = #000000
+background = #000000
+foreground = #ffffff
 alert = #888888
 
 [bar/beldot]

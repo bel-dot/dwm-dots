@@ -12,8 +12,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #ffffff;
-  fg: #000000;
+  bg: #000000;
+  fg: #ffffff;
   
   border: 0;
   margin: 0;

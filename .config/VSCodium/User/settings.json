@@ -1,5 +1,28 @@
 {
     "workbench.colorCustomizations": {
+        "[Default High Contrast Light]": {
+            "foreground": "#000000",
+            "editor.background": "#ffffff",
+            "menu.foreground": "#000000",
+            "contrastBorder": "#000000",
+            "contrastActiveBorder": "#646464",
+            "editorGroupHeader.tabsBackground": "#ffffffff",
+            "sideBar.background": "#ffffffff",
+            "sideBarSectionHeader.background": "#ffffffff",
+            "peekViewEditor.background": "#ffffffff",
+            "peekViewEditorGutter.background": "#ffffffff",
+            "peekViewTitle.background": "#ffffffff",
+            "peekViewResult.background": "#ffffffff",
+            "tab.activeBackground": "#ffffffff",
+            "tab.inactiveBackground": "#ffffffff",
+            "statusBar.background": "#ffffffff",
+            "statusBar.debuggingBackground": "#ffffffff",
+            "statusBar.noFolderBackground": "#ffffffff",
+            "statusBarItem.activeBackground": "#ffffffff",
+            "panel.background": "#ffffffff",
+            "activityBar.background": "#ffffffff",
+            "terminal.background": "#ffffffff"
+        },
         "[Default High Contrast]": {
             "foreground": "#ffffff",
             "editor.background": "#00000000",
@@ -37,7 +60,7 @@
     ],
     "zenMode.hideStatusBar": false,
     "C_Cpp_Runner.cppStandard": "c++17",
-    "workbench.colorTheme": "Default High Contrast",
+    "workbench.colorTheme": "Default High Contrast Light",
     "workbench.preferredDarkColorTheme": "Default High Contrast",
     "C_Cpp_Runner.includeSearch": [
         "*",
@@ -57,5 +80,12 @@
         "opacity": 0.85, // Range: 0-1 (To go fully transparent, set it to 0)
         "visualEffectState": "active"
     },
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "never",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
