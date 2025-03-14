@@ -1,4 +1,5 @@
 # My DWM Arch Linux setup
+![screenshot](dwm-dots.png)
 ---
 This is git repo for my dwm setup on Arch Linux, with config files for other stuff.
 
@@ -25,5 +26,5 @@ This is git repo for my dwm setup on Arch Linux, with config files for other stu
 - Shell: zsh
 - Dark mode switch utility: darkman
 - Screen temperature: redshift
-- GTK theme: Blite/Whack (Basically KDE's Breeze with my personal changes)
+- GTK theme: Blite/Whack (Basically KDE's Breeze with my personal changes. It's not perfect, but mostly acceptable)
 
