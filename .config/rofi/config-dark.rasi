@@ -4,7 +4,7 @@ configuration {
   display-window: "Windows:";
   drun-display-format: "{name}";
   font: "Courier New Bold 16";
-  modi: "window,run,drun,calc";
+  modi: "window,run,drun,calc,emoji";
   
   // enabling the icons
 }

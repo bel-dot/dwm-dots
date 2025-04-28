@@ -2697,3 +2697,10 @@ bold_font        family='Courier New' postscript_name=CourierNewPS-BoldMT
 italic_font      family='Courier New' style=Bold
 bold_italic_font family='Courier New' style=Bold
 # END_KITTY_FONTS
+
+
+
+# BEGIN_KITTY_THEME
+# 1984 Light
+include current-theme.conf
+# END_KITTY_THEME
