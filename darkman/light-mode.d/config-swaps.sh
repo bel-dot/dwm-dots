@@ -4,10 +4,6 @@
 
 cp ~/.config/btop/btop-light.conf ~/.config/btop/btop.conf
 
-# kitty
-
-cp ~/.config/kitty/kitty-light.conf ~/.config/kitty/kitty.conf
-
 # neofetch
 
 cp ~/.config/neofetch/config-light.conf ~/.config/neofetch/config.conf
@@ -28,3 +24,7 @@ cp ~/.config/kdenlivelight ~/.config/kdenliverc
 
 cp ~/cursor-light ~/.Xresources
 xrdb ~/.Xresources
+
+# Tenacity
+
+cp ~/.config/tenacity/tenacity-light.cfg ~/.config/tenacity/tenacity.cfg

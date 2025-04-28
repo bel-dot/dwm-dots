@@ -5,4 +5,6 @@
 
 cp ~/.config/dunst/darkrc ~/.config/dunst/dunstrc
 
+dunstctl reload
+
 notify-send --app-name="darkman" --urgency=low --icon=weather-clear-night "Switching to dark mode..."
