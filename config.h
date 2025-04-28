@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#define SESSION_FILE "/tmp/dwm-session"
+
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 8;       /* snap pixel */
@@ -18,16 +20,21 @@ static const char *fonts[]          = { "Courier New:bold:size=12" };
 static const char dmenufont[]       = "Courier New:bold:size=12";
 static const char col_white[]       = "#ffffff";
 static const char col_black[]       = "#000000";
-static const char *colors[][3]      = {
+static const char *colorsdark[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_white, col_black, col_black },
 	[SchemeSel]  = { col_black, col_white,  col_white},
+};
+static const char *colorslight[][3]      = {
+	/*               fg         bg         border   */
+	[SchemeNorm] = { col_black, col_white, col_white },
+	[SchemeSel]  = { col_white, col_black, col_black },
 };
 
 static const char *const autostart[] = {
 	"picom", NULL,
 	"syncthing", NULL,
-	"redshift", NULL,
+	"redshift", "-r", NULL,
 	"zsh", "-c", "$(sleep 1s && polybar -q -r beldot) &", NULL,
 	NULL
 };
@@ -42,10 +49,10 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "firefox", "Toolkit", 	NULL,				0,						1,					 -1 },
 	{ "feh", 			NULL, 			NULL,				0,						1,					 -1 },
 	{ "Pcmanfm", 	NULL, 			NULL,				0,						1,					 -1 },
+	{ "mpv", 			NULL, 			NULL,				0,						1,					 -1 },
 };	
 
 /* layout(s) */
@@ -77,22 +84,28 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
+static const char *dmenudark[] =  { "dmenu_run", "-m", dmenumon, "-i", "-fn", dmenufont, "-nb", col_black, "-nf", col_white, "-sb", col_white, "-sf", col_black, NULL };
+static const char *dmenulight[] = { "dmenu_run", "-m", dmenumon, "-i", "-fn", dmenufont, "-nb", col_white, "-nf", col_black, "-sb", col_black, "-sf", col_white, NULL };
+
+static const char *droficmd[] = { "rofi", "-show", "run", NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", NULL };
 static const char *roficalc[] = { "rofi", "-show", "calc", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *resetbar[] = {"polybar-msg", "cmd", "restart", NULL };
+static const char *switchbar[] = {"polybar-msg", "cmd", "toggle", NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL};
 static const char *lfcmd[] = { "kitty", "lfrun", NULL};
 static const char *pcmanfm[] = { "pcmanfm", NULL };
+static const char *changebg[] = { "feh", "--bg-fill", "--randomize", "/home/beldot/Wallpapers/Black/*", NULL };
+
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = droficmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_b,      spawn,      		 {.v = switchbar } },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,      		 {.v = resetbar } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -113,6 +126,8 @@ static const Key keys[] = {
 	{ Mod1Mask,                     XK_space,  spawn,      		 {.v = roficmd }    },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,												XK_semicolon, spawn, 			 { .v = changebg   } },
+	{ MODKEY|ShiftMask,							XK_l, 				spawn, 			 SHCMD("/home/beldot/lock.sh") },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
@@ -143,6 +158,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ControlMask|ShiftMask,	XK_q,			 quit,					 {1} },
 };
 
 /* button definitions */
