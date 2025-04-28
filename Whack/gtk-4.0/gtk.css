@@ -186,6 +186,16 @@ these are pretty self explicative */
 @define-color error_color @error_color_breeze;
 @define-color success_color @success_color_breeze;
 @define-color content_view_bg @content_view_bg_breeze;
+
+* {
+  border-radius: 0;
+}
+
+.toggle:checked, .toggle:checked:hover {
+  color: white;
+  background-color: black;
+}
+
 *, button:link,
 button:visited {
   padding: 0;
@@ -450,7 +460,7 @@ headerbar.selection-mode headerbar flowbox button.subtitle:visited, label:disabl
   textview text selection:hover:focus,
   textview text selection:hover, flowbox flowboxchild:hover:selected, label:disabled selection:hover, label:backdrop selection:hover {
     background-color: @theme_hovering_selected_bg_color_breeze;
-    color: @theme_fg_color_breeze; }
+    color: @theme_bg_color_breeze; }
   .sidebar:backdrop:selected,
   headerbar.selection-mode .sidebar.subtitle:backdrop:link,
   headerbar.selection-mode button.sidebar.subtitle:backdrop:visited, row:backdrop:selected, spinbutton:not(.vertical) selection:backdrop:focus, spinbutton:not(.vertical) selection:backdrop,
@@ -2369,17 +2379,20 @@ list {
     padding: 2px; }
 
 row.activatable.has-open-popup, row.activatable:hover {
-  background-color: @theme_selected_bg_color_breeze; }
+  background-color: @theme_selected_bg_color_breeze;
+  color: @theme_selected_fg_color_breeze; }
 
 row.activatable:active {
   box-shadow: none;
-  background-color: @theme_selected_bg_color_breeze; }
+  background-color: @theme_selected_bg_color_breeze;
+  color: @theme_selected_fg_color_breeze; }
 
 row.activatable:selected:active,
 headerbar.selection-mode .activatable.subtitle:active:link,
 headerbar.selection-mode button.activatable.subtitle:active:visited {
   box-shadow: none;
-  background-color: @theme_selected_bg_color_breeze; }
+  background-color: @theme_selected_bg_color_breeze;
+  color: @theme_selected_fg_color_breeze; }
 
 row.activatable:selected.has-open-popup,
 headerbar.selection-mode .activatable.has-open-popup.subtitle:link,
