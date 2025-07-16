@@ -17,8 +17,8 @@
 ;==========================================================
 
 [colors]
-background = #000000
-foreground = #ffffff
+background = #ffffff
+foreground = #000000
 alert = #888888
 
 [bar/beldot]
@@ -184,17 +184,17 @@ label = CPU: %percentage%%
 [module/memory]
 type = internal/memory
 interval = 2
-label = Mem: %percentage_used%%
+label = %{A:kitty btop:}Mem: %percentage_used%%%{A}
 
 [module/wlan]
 type = internal/network
 interface = wlp0s20f3
 interval = 3.0
 
-format-connected = WiFi: <label-connected>
+format-connected = %{A:ronema:}WiFi: <label-connected>%{A}
 label-connected = %essid%
 
-format-disconnected = WiFi: :(
+format-disconnected = %{A:ronema:}WiFi: :(%{A}
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
