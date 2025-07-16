@@ -6,14 +6,24 @@ configuration {
   font: "Courier New Bold 16";
   modi: "window,run,drun,calc,emoji";
   
-  // enabling the icons
+  /* Highlight an entry under the mouse pointer */
+  hover-select: true;
+
+  /* Disable MousePrimary as an entry selector */
+  /* Without this setting you won't be able to set MousePrimary as an entry
+     acceptor. */
+  me-select-entry: "";
+
+  /* Use either LMB single click or RMB single click or LMB double click
+     to accept an entry */
+  me-accept-entry: [ MousePrimary, MouseSecondary, MouseDPrimary ];
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #000000;
-  fg: #ffffff;
+  bg: #ffffff;
+  fg: #000000;
   
   border: 0;
   margin: 0;
