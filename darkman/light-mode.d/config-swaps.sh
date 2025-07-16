@@ -28,3 +28,7 @@ xrdb ~/.Xresources
 # Tenacity
 
 cp ~/.config/tenacity/tenacity-light.cfg ~/.config/tenacity/tenacity.cfg
+
+# Neovim
+
+cp ~/.config/nvim/init-light.vim ~/.config/nvim/init.vim
